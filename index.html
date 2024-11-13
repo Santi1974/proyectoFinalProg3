@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Segundo Parcial</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Arial:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Iconos -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header>
+      <div class="header__container">
+        <div class="header__content">
+          <div class="search__container">
+            <input
+              type="text"
+              class="header__input"
+              placeholder="Buscar un producto"
+              id="inputSearch"
+            />
+            <button class="header__button" id="buttonSearch">
+              Buscar<span class="material-symbols-outlined">search</span>
+            </button>
+          </div>
+          <div>
+            <button id="buttonAddElement" class="header__button add__button">
+              Agregar producto<span class="material-symbols-outlined">add</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- MAIN -->
+    <main>
+      <section class="main__container">
+        <aside class="main__list">
+          <h2>
+            Categorias
+            <span class="material-symbols-outlined">filter_list</span>
+          </h2>
+          <ul id="listFilter"></ul>
+        </aside>
+        <article class="main__store" id="store"></article>
+      </section>
+      <!-- MODAL -->
+      <section id="modalPopUp" class="pop_up__container">
+        <div class="pop_up">
+          <header class="pop_up__title">
+            <h1>Agregar o modificar un producto</h1>
+          </header>
+          <section class="pop_up__inputs">
+            <input
+              required
+              type="text"
+              placeholder="Nombre"
+              id="name"
+              maxlength="25"
+            />
+            <input
+              required
+              type="number"
+              placeholder="Precio"
+              id="price"
+              maxlength="7"
+            />
+            <input
+              required
+              type="number"
+              placeholder="Stock"
+              id="stock"
+              maxlength="5"
+            />
+            <select id="categorySelect">
+              <option value="" disabled selected>Seleccione una categoría</option>
+            </select>
+          </section>
+          <footer class="pop_up__actions">
+            <button id="cancelButton" class="pop_up__button cancel">Cancelar</button>
+            <button id="acceptButton" class="pop_up__button accept">Aceptar</button>
+            <button id="deleteButton" class="pop_up__button delete">Eliminar</button>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <!-- JavaScript -->
+    <script src="main.js"></script>
+  </body>
+</html>
